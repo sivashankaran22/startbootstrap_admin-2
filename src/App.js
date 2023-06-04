@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {  Route,Routes} from "react-router-dom";
+import MainBlock from './Components/MainBlock';
+import Login from './Subcomponents/Login';
+import ForgotPass from './Subcomponents/ForgotPass';
+import Register from './Subcomponents/Register';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes>
+        <Route exact path ="/" element ={<MainBlock/>}/>
+        <Route exact path ="/login-page" element ={<Login/>}/>
+        <Route exact path ="/for_pass-page" element ={<ForgotPass/>}/>
+        <Route exact path ="/register-page" element ={<Register/>}/>
+       </Routes>
+     </div>
   );
 }
 
 export default App;
+// register-page
+// for_pass-page"
